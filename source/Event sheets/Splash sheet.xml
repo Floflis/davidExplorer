@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Splash sheet</name>
+    <events>
+        <event-block sid="324106249816331">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="721917666986824" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set HTML" sid="742983883244831" type="HTMLIFrame">
+                    <param id="0" name="Set HTML">&quot;&lt;style&gt;body{color:black}&lt;/style&gt;&lt;center&gt;&lt;h4&gt;Screens&lt;/h4&gt;&lt;h1&gt;File Explorer&lt;/h1&gt;&lt;/center&gt;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="360310713846283">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="596427660053236" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="304382969332768" type="System">
+                    <param id="0" name="Layout">App</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

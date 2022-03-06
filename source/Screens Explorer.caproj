@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Screens Explorer</name>
+    <description>Manage files in your device.</description>
+    <version>1.0.0.0</version>
+    <author>Plasmmer</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.screens.explorer</app-id>
+    <unique-id>1csb056bzajuj</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="PlayLive" id="HTML_iFrame" version="1.419999957">HTML | iFrame</plugin>
+        <plugin author="Armaldio" id="armaldio_electron" version="1">Electron</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Electron" sid="190647997113774">
+            <plugin id="armaldio_electron" />
+        </object-type>
+        <object-type name="HTMLIFrame" sid="299014474502402">
+            <plugin id="HTML_iFrame" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Splash.xml</layout>
+        <layout>App.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Splash sheet.xml</event-sheet>
+        <event-sheet>App sheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Electron" uid="0" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

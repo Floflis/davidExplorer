@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>App sheet</name>
+    <events>
+        <event-block sid="173099239752989">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="555787265238940" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Append HTML" sid="169916445352727" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;.addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&lt;/style&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="963004526902400" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;back&apos;); title=Back&gt;←&lt;/button&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="810178623277794" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;forward&apos;); title=Forward&gt;→&lt;/button&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="217425454355001" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;input class=addressbar&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="329430334922070" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;refresh&apos;); title=Refresh &apos;&apos;Computer&apos;&apos;&gt;↔&lt;/button&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="351577987475838" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;input class=search placeholder=Search Computer&gt;&lt;br/&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="912545069056132" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;nav class=bar&gt;&lt;/nav&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="638766226369872" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;aside&gt;&lt;/aside&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="731977068728573" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;article&gt;&lt;/article&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="697319153239555" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="204335377251769">
+            <conditions>
+                <condition id="4" name="Compare C2 Function" sid="309020114409578" type="HTMLIFrame">
+                    <param id="0" name="C2">&quot;back&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Remove elements" sid="919100321492904" type="HTMLIFrame">
+                    <param id="0" name="ID/Class">&quot;bar&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="718047765506266">
+            <conditions>
+                <condition id="4" name="Compare C2 Function" sid="624843001087047" type="HTMLIFrame">
+                    <param id="0" name="C2">&quot;forward&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Remove elements" sid="622618580456862" type="HTMLIFrame">
+                    <param id="0" name="ID/Class">&quot;addressbar&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="253670022018088">
+            <conditions>
+                <condition id="4" name="Compare C2 Function" sid="876578704051668" type="HTMLIFrame">
+                    <param id="0" name="C2">&quot;refresh&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Remove elements" sid="390102494635749" type="HTMLIFrame">
+                    <param id="0" name="ID/Class">&quot;search&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="796169004211934">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="307882215635776" type="HTMLIFrame" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
