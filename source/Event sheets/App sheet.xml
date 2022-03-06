@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>App sheet</name>
     <events>
+        <variable constant="0" name="list" sid="194357329569141" static="0" type="number">0</variable>
         <event-block sid="173099239752989">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="555787265238940" type="System" />
@@ -12,7 +13,7 @@
                     <param id="0" name="Title">&quot;File Explorer&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="169916445352727" type="HTMLIFrame">
-                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;.addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&lt;/style&gt;&quot;</param>
+                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;.addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}&lt;/style&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="963004526902400" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;back&apos;); title=Back&gt;←&lt;/button&gt;&quot;</param>
@@ -36,10 +37,14 @@
                     <param id="0" name="Append HTML">&quot;&lt;aside&gt;&lt;/aside&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="731977068728573" type="HTMLIFrame">
-                    <param id="0" name="Append HTML">&quot;&lt;article&gt;&lt;/article&gt;&quot;</param>
+                    <param id="0" name="Append HTML">&quot;&lt;article id=&quot;&quot;filestable&quot;&quot;&gt;&lt;/article&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="697319153239555" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="623202774444177" type="System">
+                    <param id="0" name="Variable">list</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -85,6 +90,44 @@
                     <actions>
                         <action id="25" name="Remove elements" sid="390102494635749" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;.search&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="525548977786862">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="429089406542173" type="System">
+                    <param id="0" name="Variable">list</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="262934827354563" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="349446887300692">
+                    <conditions>
+                        <condition disabled="1" id="5" name="For each file/folder" sid="315484963767945" type="Electron">
+                            <param id="0" name="Path">&quot;/&quot;</param>
+                            <param id="1" name="Files/Folders">1</param>
+                            <param id="2" name="Recursive">0</param>
+                        </condition>
+                        <condition id="5" name="For each file/folder" sid="368051195772318" type="Electron">
+                            <param id="0" name="Path">&quot;/1&quot;</param>
+                            <param id="1" name="Files/Folders">1</param>
+                            <param id="2" name="Recursive">0</param>
+                        </condition>
+                        <condition disabled="1" id="-4" name="Trigger once while true" sid="584928995772557" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="7" name="Append HTML" sid="189796249598105" type="HTMLIFrame">
+                            <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
+                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
