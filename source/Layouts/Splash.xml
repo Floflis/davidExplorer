@@ -54,7 +54,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1</x>
-                        <y>0</y>
+                        <y>1</y>
                         <z>0</z>
                         <width>852</width>
                         <height>479</height>
