@@ -8,6 +8,11 @@
                 <condition id="-2" name="On start of layout" sid="721917666986824" type="System" />
             </conditions>
             <actions>
+                <action id="29" name="Set Size" sid="495635389555554" type="Electron">
+                    <param id="0" name="Width">854</param>
+                    <param id="1" name="Height">480</param>
+                    <param id="2" name="Animated">0</param>
+                </action>
                 <action id="6" name="Set HTML" sid="742983883244831" type="HTMLIFrame">
                     <param id="0" name="Set HTML">&quot;&lt;style&gt;body{color:black}&lt;/style&gt;&lt;center&gt;&lt;h4&gt;Screens&lt;/h4&gt;&lt;h1&gt;File Explorer&lt;/h1&gt;&lt;/center&gt;&quot;</param>
                 </action>
