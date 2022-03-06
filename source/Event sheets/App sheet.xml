@@ -43,50 +43,68 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="204335377251769">
-            <conditions>
-                <condition id="4" name="Compare C2 Function" sid="309020114409578" type="HTMLIFrame">
-                    <param id="0" name="C2">&quot;back&quot;</param>
-                    <param id="1" name="Case">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="25" name="Remove elements" sid="919100321492904" type="HTMLIFrame">
-                    <param id="0" name="ID/Class">&quot;bar&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="718047765506266">
-            <conditions>
-                <condition id="4" name="Compare C2 Function" sid="624843001087047" type="HTMLIFrame">
-                    <param id="0" name="C2">&quot;forward&quot;</param>
-                    <param id="1" name="Case">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="25" name="Remove elements" sid="622618580456862" type="HTMLIFrame">
-                    <param id="0" name="ID/Class">&quot;addressbar&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="253670022018088">
-            <conditions>
-                <condition id="4" name="Compare C2 Function" sid="876578704051668" type="HTMLIFrame">
-                    <param id="0" name="C2">&quot;refresh&quot;</param>
-                    <param id="1" name="Case">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="25" name="Remove elements" sid="390102494635749" type="HTMLIFrame">
-                    <param id="0" name="ID/Class">&quot;search&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="796169004211934">
             <conditions>
                 <condition id="3" name="On C2 Function" sid="307882215635776" type="HTMLIFrame" />
             </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="204335377251769">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="309020114409578" type="HTMLIFrame">
+                            <param id="0" name="C2">&quot;back&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Remove elements" sid="919100321492904" type="HTMLIFrame">
+                            <param id="0" name="ID/Class">&quot;.bar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="978556630792674">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="489021520084405" type="HTMLIFrame" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="718047765506266">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="624843001087047" type="HTMLIFrame">
+                            <param id="0" name="C2">&quot;forward&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Remove elements" sid="622618580456862" type="HTMLIFrame">
+                            <param id="0" name="ID/Class">&quot;.addressbar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="804061243539772">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="958884168620287" type="HTMLIFrame" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="253670022018088">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="876578704051668" type="HTMLIFrame">
+                            <param id="0" name="C2">&quot;refresh&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Remove elements" sid="390102494635749" type="HTMLIFrame">
+                            <param id="0" name="ID/Class">&quot;.search&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
