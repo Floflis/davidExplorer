@@ -62,14 +62,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="978556630792674">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="489021520084405" type="HTMLIFrame" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="718047765506266">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="624843001087047" type="HTMLIFrame">
@@ -83,14 +75,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="804061243539772">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="958884168620287" type="HTMLIFrame" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="253670022018088">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="876578704051668" type="HTMLIFrame">
