@@ -48,13 +48,13 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="796169004211934">
+        <event-block disabled="1" sid="796169004211934">
             <conditions>
                 <condition id="3" name="On C2 Function" sid="307882215635776" type="HTMLIFrame" />
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="204335377251769">
+                <event-block disabled="1" sid="204335377251769">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="309020114409578" type="HTMLIFrame">
                             <param id="0" name="C2">&quot;back&quot;</param>
@@ -67,7 +67,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="718047765506266">
+                <event-block disabled="1" sid="718047765506266">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="624843001087047" type="HTMLIFrame">
                             <param id="0" name="C2">&quot;forward&quot;</param>
@@ -80,7 +80,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="253670022018088">
+                <event-block disabled="1" sid="253670022018088">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="876578704051668" type="HTMLIFrame">
                             <param id="0" name="C2">&quot;refresh&quot;</param>
@@ -125,6 +125,31 @@
                             <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
                         </action>
                         <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
+                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="513574553637031">
+                    <conditions>
+                        <condition disabled="1" id="5" name="For each file/folder" sid="204037286086731" type="Electron">
+                            <param id="0" name="Path">&quot;/&quot;</param>
+                            <param id="1" name="Files/Folders">1</param>
+                            <param id="2" name="Recursive">0</param>
+                        </condition>
+                        <condition id="5" name="For each file/folder" sid="505130611311532" type="Electron">
+                            <param id="0" name="Path">&quot;/1&quot;</param>
+                            <param id="1" name="Files/Folders">0</param>
+                            <param id="2" name="Recursive">0</param>
+                        </condition>
+                        <condition disabled="1" id="-4" name="Trigger once while true" sid="782680960784375" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="7" name="Append HTML" sid="912581745358464" type="HTMLIFrame">
+                            <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="844544202890020" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
                             <param id="2" name="Append">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
