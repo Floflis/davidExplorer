@@ -3,7 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>App sheet</name>
     <events>
-        <variable constant="0" name="list" sid="194357329569141" static="0" type="number">0</variable>
+        <variable comment="0 = not listing files; 1 = listing files" constant="0" name="list" sid="194357329569141" static="0" type="number">0</variable>
+        <variable constant="0" name="currentdir" sid="442507253124268" static="0" type="text">/1</variable>
         <event-block sid="173099239752989">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="555787265238940" type="System" />
@@ -22,7 +23,7 @@
                     <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;forward&apos;); title=Forward&gt;→&lt;/button&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="217425454355001" type="HTMLIFrame">
-                    <param id="0" name="Append HTML">&quot;&lt;input class=addressbar&gt;&quot;</param>
+                    <param id="0" name="Append HTML">&quot;&lt;input class=addressbar value=&quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="329430334922070" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;refresh&apos;); title=Refresh &apos;&apos;Computer&apos;&apos;&gt;↔&lt;/button&gt;&quot;</param>
@@ -126,7 +127,7 @@
                 <event-block sid="513574553637031">
                     <conditions>
                         <condition id="5" name="For each file/folder" sid="505130611311532" type="Electron">
-                            <param id="0" name="Path">&quot;/1&quot;</param>
+                            <param id="0" name="Path">currentdir</param>
                             <param id="1" name="Files/Folders">0</param>
                             <param id="2" name="Recursive">0</param>
                         </condition>
@@ -145,7 +146,7 @@
                 <event-block sid="349446887300692">
                     <conditions>
                         <condition id="5" name="For each file/folder" sid="368051195772318" type="Electron">
-                            <param id="0" name="Path">&quot;/1&quot;</param>
+                            <param id="0" name="Path">currentdir</param>
                             <param id="1" name="Files/Folders">1</param>
                             <param id="2" name="Recursive">0</param>
                         </condition>
