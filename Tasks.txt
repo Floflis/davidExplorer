@@ -1,0 +1,5 @@
+- display icon for file or folder
+- click to open folder (file will display an "not implemented yet dialog") then refresh listing
+Messages for important directories https://github.com/Floflis/Floflis-Explorer/issues/2
+- read the .folderdata of a folder, starting by: empty/index.html (have own default message for empty folders) https://github.com/Floflis/Floflis-Explorer/issues/4
+- display Windows icons in folders, from .ini
