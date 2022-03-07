@@ -45,7 +45,7 @@
         <object-type name="Electron" sid="190647997113774">
             <plugin id="armaldio_electron" />
         </object-type>
-        <object-type name="HTMLIFrame" sid="299014474502402">
+        <object-type name="UI" sid="299014474502402">
             <plugin id="HTML_iFrame" />
         </object-type>
         <object-type name="Browser" sid="667139681756280">
@@ -76,5 +76,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="script.js" />
     </files-folder>
 </c2project>

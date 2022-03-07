@@ -13,37 +13,40 @@
                 <action id="30" name="Set title" sid="328232009886092" type="Electron">
                     <param id="0" name="Title">&quot;File Explorer&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="169916445352727" type="HTMLIFrame">
-                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}&#x0D;&#x0A;.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;    width: 21%;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}.exploreritem{display:inline-block;margin-right:10px}&#x0D;&#x0A;.exploreritem:hover{background:#ababa3}&#x0D;&#x0A;.exploreritem.selected {&#x0D;&#x0A;    background: blue;&#x0D;&#x0A;    color: #fff&#x0D;&#x0A;}&lt;/style&gt;&#x0D;&#x0A;&lt;script&gt;&#x0D;&#x0A;var input = document.getElementById(&apos;addressbar&apos;);&#x0D;&#x0A;input.addEventListener(&apos;keyup&apos;, function(event) {&#x0D;&#x0A;  if (event.keyCode === 13) {&#x0D;&#x0A;   event.preventDefault();&#x0D;&#x0A;   document.getElementById(&apos;enterbtn&apos;).click();&#x0D;&#x0A;  }&#x0D;&#x0A;});&#x0D;&#x0A;&lt;/script&gt;&quot;</param>
+                <action id="19" name="Include Javascript file" sid="472396732576260" type="UI">
+                    <param id="0" name="Javascript file">&quot;script.js&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="963004526902400" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="169916445352727" type="UI">
+                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}&#x0D;&#x0A;.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;    width: 21%;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}&#x0D;&#x0A;.exploreritem{display:inline-block;margin-right:10px;    /*padding: 0px 3px 5px 3px;*/&#x0D;&#x0A;    padding: 5px;&#x0D;&#x0A;    border-radius: 5px;}&#x0D;&#x0A;.exploreritem:hover{background:#ababa3}&#x0D;&#x0A;.exploreritem.selected {&#x0D;&#x0A;    background: blue;&#x0D;&#x0A;    color: #fff&#x0D;&#x0A;}&lt;/style&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="963004526902400" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;button disabled onclick=C2(&apos;back&apos;); title=Back&gt;←&lt;/button&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="810178623277794" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="810178623277794" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;button disabled onclick=C2(&apos;forward&apos;); title=Forward&gt;→&lt;/button&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="217425454355001" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="217425454355001" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;input id=addressbar value=&quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="539264033740166" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="539264033740166" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;button id=&quot;&quot;enterbtn&quot;&quot; title=&quot;&quot;Enter directory&quot;&quot; onclick=&quot;&quot;C2(&apos;enterdir&apos;);&quot;&quot;&gt;→&lt;/button&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="329430334922070" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="329430334922070" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;refresh&apos;); title=Refresh &apos;&apos;Computer&apos;&apos;&gt;↔&lt;/button&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="351577987475838" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="351577987475838" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;input class=search placeholder=Search Computer&gt;&lt;br/&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="912545069056132" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="912545069056132" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;nav class=bar&gt;&lt;/nav&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="638766226369872" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="638766226369872" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;aside&gt;&lt;/aside&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="731977068728573" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="731977068728573" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;article id=&quot;&quot;filestable&quot;&quot;&gt;&lt;/article&gt;&quot;</param>
                 </action>
-                <action id="7" name="Append HTML" sid="697319153239555" type="HTMLIFrame">
+                <action id="7" name="Append HTML" sid="697319153239555" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="605781375833720" type="System">
@@ -61,13 +64,13 @@
         </event-block>
         <event-block sid="796169004211934">
             <conditions>
-                <condition id="3" name="On C2 Function" sid="307882215635776" type="HTMLIFrame" />
+                <condition id="3" name="On C2 Function" sid="307882215635776" type="UI" />
             </conditions>
             <actions />
             <sub-events>
                 <event-block disabled="1" sid="204335377251769">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="309020114409578" type="HTMLIFrame">
+                        <condition id="4" name="Compare C2 Function" sid="309020114409578" type="UI">
                             <param id="0" name="C2">&quot;back&quot;</param>
                             <param id="1" name="Case">0</param>
                         </condition>
@@ -76,7 +79,7 @@
                 </event-block>
                 <event-block disabled="1" sid="718047765506266">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="624843001087047" type="HTMLIFrame">
+                        <condition id="4" name="Compare C2 Function" sid="624843001087047" type="UI">
                             <param id="0" name="C2">&quot;forward&quot;</param>
                             <param id="1" name="Case">0</param>
                         </condition>
@@ -85,7 +88,7 @@
                 </event-block>
                 <event-block sid="253670022018088">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="876578704051668" type="HTMLIFrame">
+                        <condition id="4" name="Compare C2 Function" sid="876578704051668" type="UI">
                             <param id="0" name="C2">&quot;refresh&quot;</param>
                             <param id="1" name="Case">0</param>
                         </condition>
@@ -102,7 +105,7 @@
                 </event-block>
                 <event-block sid="523481103139547">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="606338513058159" type="HTMLIFrame">
+                        <condition id="4" name="Compare C2 Function" sid="606338513058159" type="UI">
                             <param id="0" name="C2">&quot;enterdir&quot;</param>
                             <param id="1" name="Case">0</param>
                         </condition>
@@ -133,7 +136,7 @@
                 <condition id="-4" name="Trigger once while true" sid="262934827354563" type="System" />
             </conditions>
             <actions>
-                <action id="24" name="Get elements" sid="460661358984421" type="HTMLIFrame">
+                <action id="24" name="Get elements" sid="460661358984421" type="UI">
                     <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                     <param id="1" name="Set">&quot; &quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
@@ -156,10 +159,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="24" name="Get elements" sid="905090225597464" type="HTMLIFrame">
+                        <action id="24" name="Get elements" sid="905090225597464" type="UI">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -172,10 +175,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
+                        <action id="24" name="Get elements" sid="866692304713327" type="UI">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot;  class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot;  onclick=&quot;&quot;javascript:myname=&apos;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
