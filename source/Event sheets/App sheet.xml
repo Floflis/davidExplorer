@@ -106,31 +106,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="349446887300692">
-                    <conditions>
-                        <condition disabled="1" id="5" name="For each file/folder" sid="315484963767945" type="Electron">
-                            <param id="0" name="Path">&quot;/&quot;</param>
-                            <param id="1" name="Files/Folders">1</param>
-                            <param id="2" name="Recursive">0</param>
-                        </condition>
-                        <condition id="5" name="For each file/folder" sid="368051195772318" type="Electron">
-                            <param id="0" name="Path">&quot;/1&quot;</param>
-                            <param id="1" name="Files/Folders">1</param>
-                            <param id="2" name="Recursive">0</param>
-                        </condition>
-                        <condition disabled="1" id="-4" name="Trigger once while true" sid="584928995772557" type="System" />
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="7" name="Append HTML" sid="189796249598105" type="HTMLIFrame">
-                            <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
-                        </action>
-                        <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
-                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
-                            <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="513574553637031">
                     <conditions>
                         <condition disabled="1" id="5" name="For each file/folder" sid="204037286086731" type="Electron">
@@ -150,6 +125,31 @@
                             <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
                         </action>
                         <action id="24" name="Get elements" sid="844544202890020" type="HTMLIFrame">
+                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
+                            <param id="1" name="Set">&quot;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="349446887300692">
+                    <conditions>
+                        <condition disabled="1" id="5" name="For each file/folder" sid="315484963767945" type="Electron">
+                            <param id="0" name="Path">&quot;/&quot;</param>
+                            <param id="1" name="Files/Folders">1</param>
+                            <param id="2" name="Recursive">0</param>
+                        </condition>
+                        <condition id="5" name="For each file/folder" sid="368051195772318" type="Electron">
+                            <param id="0" name="Path">&quot;/1&quot;</param>
+                            <param id="1" name="Files/Folders">1</param>
+                            <param id="2" name="Recursive">0</param>
+                        </condition>
+                        <condition disabled="1" id="-4" name="Trigger once while true" sid="584928995772557" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="7" name="Append HTML" sid="189796249598105" type="HTMLIFrame">
+                            <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
                             <param id="2" name="Append">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
