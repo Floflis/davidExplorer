@@ -52,19 +52,16 @@
                 <action id="7" name="Append HTML" sid="697319153239555" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="605781375833720" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="605781375833720" type="System">
                     <param id="0" name="Variable">currentdir</param>
                     <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}addressbarvalue()&quot;)</param>
                 </action>
-                <action id="-16" name="Wait" sid="548866741161635" type="System">
+                <action disabled="1" id="-16" name="Wait" sid="548866741161635" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
                 <action id="-9" name="Set value" sid="623202774444177" type="System">
                     <param id="0" name="Variable">list</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action disabled="1" id="17" name="Execute Javascript" sid="447632025657818" type="Browser">
-                    <param id="0" name="Javascript">&quot;C2(&apos;open-file-&quot; &amp; currentdir &amp; &quot;&apos;);&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -139,25 +136,29 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="121367180016544">
+                <event-block sid="575131273315503">
                     <conditions>
-                        <condition disabled="1" id="4" name="Compare C2 Function" sid="890873816654083" type="UI">
-                            <param id="0" name="C2">&quot;open-file-&quot; &amp; currentdir</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
-                        <condition id="4" name="Compare C2 Function" sid="951390551679281" type="UI">
-                            <param id="0" name="C2">ui.C2</param>
-                            <param id="1" name="Case">0</param>
+                        <condition id="-8" name="Compare two values" sid="153042933531079" type="System">
+                            <param id="0" name="First value">find(UI.C2,&quot;open-folder-&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">-1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="268728763836389" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="257312938390618" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;It wooooorks &lt;3&quot;</param>
+                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
                         </action>
-                        <action id="14" name="Log" sid="580632008526067" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">UI.C2</param>
+                        <action id="-9" name="Set value" sid="943126529715730" type="System">
+                            <param id="0" name="Variable">currentdir</param>
+                            <param id="1" name="Value">currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="787501072365659" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="375840699298912" type="System">
+                            <param id="0" name="Variable">list</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -170,30 +171,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="607504863537420" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;It wooooorks &lt;3&quot;</param>
-                        </action>
-                        <action id="14" name="Log" sid="111265145998360" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">UI.C2</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="211830337247810" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)\\.&quot;,&quot;i&quot;,1)</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="801326621148924" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)\.&quot;,&quot;i&quot;,1)</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="702872240818702" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)\.&quot;,&quot;i&quot;,1) &amp; &quot;It removes the .extension&quot;</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="347707402901075" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)&quot;,&quot;i&quot;,1)</param>
-                        </action>
                         <action id="14" name="Log" sid="966971416426882" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1)</param>
