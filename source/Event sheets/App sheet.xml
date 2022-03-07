@@ -159,7 +159,7 @@
                         <action id="24" name="Get elements" sid="905090225597464" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -175,7 +175,7 @@
                         <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot;  class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
