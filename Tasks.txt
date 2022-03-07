@@ -1,10 +1,10 @@
-- display address in address bar
+- FrameworkJS
 
 - every file/folder will have an onclick (open-file-, open-folder-) containing its name
 
-- Floflis 2011 icon
+- doubleclick to open folder (file will display an "not implemented yet dialog") then refresh listing
 
-- click to open folder (file will display an "not implemented yet dialog") then refresh listing
+- context menu with "Create New Document" > "Empty Document" items, and write empty file to currentdirectory with the desired title from the modal it opens
 
 - Detect icon theme of OS, then use string path
 
