@@ -1,4 +1,4 @@
-- display icon for file or folder
+- every file will have an onclick
 - click to open folder (file will display an "not implemented yet dialog") then refresh listing
 Messages for important directories https://github.com/Floflis/Floflis-Explorer/issues/2
 - read the .folderdata of a folder, starting by: empty/index.html (have own default message for empty folders) https://github.com/Floflis/Floflis-Explorer/issues/4
