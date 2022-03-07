@@ -1,8 +1,6 @@
 - FrameworkJS
 
-- every file/folder will have an onclick (open-file-, open-folder-) containing its name
-
-- click a item to select it (get element by ID filename)
+- every file/folder will have an doubleclick (open-file-, open-folder-) containing its name
 
 - doubleclick to open folder (file will display an "not implemented yet dialog") then refresh listing
 
