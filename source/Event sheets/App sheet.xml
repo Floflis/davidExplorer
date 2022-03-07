@@ -13,7 +13,7 @@
                     <param id="0" name="Title">&quot;File Explorer&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="169916445352727" type="HTMLIFrame">
-                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;.addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}&lt;/style&gt;&quot;</param>
+                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;.addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}.exploreritem{display:inline-block;margin-right:10px}&lt;/style&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="963004526902400" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;back&apos;); title=Back&gt;←&lt;/button&gt;&quot;</param>
@@ -121,7 +121,7 @@
                         <action id="24" name="Get elements" sid="905090225597464" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div&gt;&lt;img width=&quot;&quot;32px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;br/&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/div&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -140,7 +140,7 @@
                         <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
