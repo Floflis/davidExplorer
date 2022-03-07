@@ -1,5 +1,19 @@
-- every file will have an onclick
+- display address in address bar
+
+- every file/folder will have an onclick (open-file-, open-folder-) containing its name
+
+- Floflis 2011 icon
+
 - click to open folder (file will display an "not implemented yet dialog") then refresh listing
+
+- Detect icon theme of OS, then use string path
+
+- "My Computer" and "Network" collapsibles
+
 Messages for important directories https://github.com/Floflis/Floflis-Explorer/issues/2
 - read the .folderdata of a folder, starting by: empty/index.html (have own default message for empty folders) https://github.com/Floflis/Floflis-Explorer/issues/4
 - display Windows icons in folders, from .ini
+
+- Use Electron GTK and use same GTK CSS styles from Nemo
+
+- Multi-tabs navigation (already better than Windows Explorer)
