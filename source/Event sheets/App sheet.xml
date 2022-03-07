@@ -201,6 +201,9 @@
                     <param id="0" name="Variable">list</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="17" name="Execute Javascript" sid="119811980393780" type="Browser">
+                    <param id="0" name="Javascript">&quot;document.getElementById(&quot;&quot;addressbar&quot;&quot;).value = &quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="513574553637031">
