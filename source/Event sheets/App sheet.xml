@@ -63,6 +63,9 @@
                     <param id="0" name="Variable">list</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action disabled="1" id="17" name="Execute Javascript" sid="447632025657818" type="Browser">
+                    <param id="0" name="Javascript">&quot;C2(&apos;open-file-&quot; &amp; currentdir &amp; &quot;&apos;);&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="796169004211934">
@@ -136,6 +139,67 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block disabled="1" sid="121367180016544">
+                    <conditions>
+                        <condition disabled="1" id="4" name="Compare C2 Function" sid="890873816654083" type="UI">
+                            <param id="0" name="C2">&quot;open-file-&quot; &amp; currentdir</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="4" name="Compare C2 Function" sid="951390551679281" type="UI">
+                            <param id="0" name="C2">ui.C2</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="268728763836389" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;It wooooorks &lt;3&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="580632008526067" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">UI.C2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="451107861079868">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="667854329847368" type="System">
+                            <param id="0" name="First value">find(UI.C2,&quot;open-file-&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="607504863537420" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;It wooooorks &lt;3&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="111265145998360" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">UI.C2</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="211830337247810" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)\\.&quot;,&quot;i&quot;,1)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="801326621148924" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)\.&quot;,&quot;i&quot;,1)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="702872240818702" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)\.&quot;,&quot;i&quot;,1) &amp; &quot;It removes the .extension&quot;</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="347707402901075" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(\w+)&quot;,&quot;i&quot;,1)</param>
+                        </action>
+                        <action id="14" name="Log" sid="966971416426882" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="525548977786862">
@@ -174,7 +238,7 @@
                         <action id="24" name="Get elements" sid="905090225597464" type="UI">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-folder-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -190,7 +254,7 @@
                         <action id="24" name="Get elements" sid="866692304713327" type="UI">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot;  onclick=&quot;&quot;javascript:myname=&apos;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot;  onclick=&quot;&quot;javascript:myname=&apos;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-file-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/Floflis/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
