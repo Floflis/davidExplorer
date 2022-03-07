@@ -14,7 +14,7 @@
                     <param id="0" name="Title">&quot;File Explorer&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="169916445352727" type="HTMLIFrame">
-                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}.exploreritem{display:inline-block;margin-right:10px}&lt;/style&gt;&#x0D;&#x0A;&lt;script&gt;&#x0D;&#x0A;var input = document.getElementById(&quot;&quot;addressbar&quot;&quot;);&#x0D;&#x0A;input.addEventListener(&quot;&quot;keyup&quot;&quot;, function(event) {&#x0D;&#x0A;  if (event.keyCode === 13) {&#x0D;&#x0A;   event.preventDefault();&#x0D;&#x0A;   alert(&quot;&quot;It works!&quot;&quot;);&#x0D;&#x0A;   C2(&quot;&quot;updtcurrentdir&quot;&quot;);&#x0D;&#x0A;  }&#x0D;&#x0A;});&#x0D;&#x0A;&lt;/script&gt;&quot;</param>
+                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}.exploreritem{display:inline-block;margin-right:10px}&lt;/style&gt;&#x0D;&#x0A;&lt;script&gt;&#x0D;&#x0A;var input = document.getElementById(&apos;addressbar&apos;);&#x0D;&#x0A;input.addEventListener(&apos;keyup&apos;, function(event) {&#x0D;&#x0A;  if (event.keyCode === 13) {&#x0D;&#x0A;   event.preventDefault();&#x0D;&#x0A;   document.getElementById(&apos;enterbtn&apos;).click();&#x0D;&#x0A;  }&#x0D;&#x0A;});&#x0D;&#x0A;&lt;/script&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="963004526902400" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;back&apos;); title=Back&gt;←&lt;/button&gt;&quot;</param>
@@ -24,6 +24,9 @@
                 </action>
                 <action id="7" name="Append HTML" sid="217425454355001" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;input id=addressbar value=&quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;&gt;&quot;</param>
+                </action>
+                <action id="7" name="Append HTML" sid="539264033740166" type="HTMLIFrame">
+                    <param id="0" name="Append HTML">&quot;&lt;button id=&quot;&quot;enterbtn&quot;&quot; title=&quot;&quot;Enter directory&quot;&quot; onclick=&quot;&quot;C2(&apos;enterdir&apos;);&quot;&quot;&gt;→&lt;/button&gt;&quot;</param>
                 </action>
                 <action id="7" name="Append HTML" sid="329430334922070" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;refresh&apos;); title=Refresh &apos;&apos;Computer&apos;&apos;&gt;↔&lt;/button&gt;&quot;</param>
@@ -43,74 +46,14 @@
                 <action id="7" name="Append HTML" sid="697319153239555" type="HTMLIFrame">
                     <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
                 </action>
-                <action disabled="1" id="-9" name="Set value" sid="349372599347970" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;console.log(&apos;/1&apos;)&quot;)</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="194967079132783" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;return &apos;/1&apos;&quot;)</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="374374388113951" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;return &quot;&quot;/1&quot;&quot;&quot;)</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="766365055105778" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;return &quot;&quot;/1&quot;&quot;;&quot;)</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="818360048811734" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;console.log(&apos;/1&apos;);&quot;)</param>
-                </action>
                 <action id="-9" name="Set value" sid="605781375833720" type="System">
                     <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}&#x0D;&#x0A;addressbarvalue()&quot;)</param>
+                    <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}addressbarvalue()&quot;)</param>
                 </action>
                 <action id="-16" name="Wait" sid="548866741161635" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
                 <action id="-9" name="Set value" sid="623202774444177" type="System">
-                    <param id="0" name="Variable">list</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="408464641338813">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="832723424004949" type="System" />
-            </conditions>
-            <actions>
-                <action disabled="1" id="-9" name="Set value" sid="339229924760850" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;var x=document.getElementById(&quot;&quot;addressbar&quot;&quot;).value;return x&quot;)</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="240622289453942" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;var x=document.getElementById(&quot;&quot;addressbar&quot;&quot;).value;console.log(x)&quot;)</param>
-                </action>
-                <action id="-9" name="Set value" sid="307460365295018" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;console.log(&apos;/1&apos;)&quot;)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="788389389006938">
-            <conditions>
-                <condition disabled="1" id="-1" name="Every tick" sid="834400920928612" type="System" />
-                <condition id="-6" name="Every X seconds" sid="447112066944490" type="System">
-                    <param id="0" name="Interval (seconds)">5</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="645469862959547" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}&#x0D;&#x0A;addressbarvalue()&quot;)</param>
-                </action>
-                <action id="-16" name="Wait" sid="743030220204191" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action id="-9" name="Set value" sid="885404765576049" type="System">
                     <param id="0" name="Variable">list</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -129,11 +72,7 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="25" name="Remove elements" sid="919100321492904" type="HTMLIFrame">
-                            <param id="0" name="ID/Class">&quot;.bar&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block disabled="1" sid="718047765506266">
                     <conditions>
@@ -142,11 +81,7 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="25" name="Remove elements" sid="622618580456862" type="HTMLIFrame">
-                            <param id="0" name="ID/Class">&quot;.addressbar&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="253670022018088">
                     <conditions>
@@ -156,11 +91,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="24" name="Get elements" sid="253779955420396" type="HTMLIFrame">
-                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
-                            <param id="1" name="Set">&quot; &quot;</param>
-                            <param id="2" name="Append">&quot;&quot;</param>
-                        </action>
                         <action id="-16" name="Wait" sid="549257548530877" type="System">
                             <param id="0" name="Seconds">dt</param>
                         </action>
@@ -173,22 +103,14 @@
                 <event-block sid="523481103139547">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="606338513058159" type="HTMLIFrame">
-                            <param id="0" name="C2">&quot;updtcurrentdir&quot;</param>
+                            <param id="0" name="C2">&quot;enterdir&quot;</param>
                             <param id="1" name="Case">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="221193022370753" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;[Enter] works!&quot;</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="624291450131243" type="System">
+                        <action id="-9" name="Set value" sid="328652540162392" type="System">
                             <param id="0" name="Variable">currentdir</param>
-                            <param id="1" name="Value">Browser.ExecJS(&quot;var x=document.getElementById(&quot;&quot;addressbar&quot;&quot;).value;return x&quot;)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="711033816943657" type="System">
-                            <param id="0" name="Variable">currentdir</param>
-                            <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}&#x0D;&#x0A;addressbarvalue()&quot;)</param>
+                            <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}addressbarvalue()&quot;)</param>
                         </action>
                         <action id="-16" name="Wait" sid="393612251845969" type="System">
                             <param id="0" name="Seconds">dt</param>
@@ -234,9 +156,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="7" name="Append HTML" sid="912581745358464" type="HTMLIFrame">
-                            <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
-                        </action>
                         <action id="24" name="Get elements" sid="905090225597464" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
@@ -253,9 +172,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="7" name="Append HTML" sid="189796249598105" type="HTMLIFrame">
-                            <param id="0" name="Append HTML">&quot;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&quot;</param>
-                        </action>
                         <action id="24" name="Get elements" sid="866692304713327" type="HTMLIFrame">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
