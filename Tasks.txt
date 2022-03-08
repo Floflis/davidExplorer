@@ -1,7 +1,5 @@
 - fix scrolling issues for items list
 
-- if currentdir is "/1" and user clicks in "Z-root", reset currentdir to "/"
-
 - statusbar: display item count and Free space
 
 - statusbar: display selected item's icon (512x512)
