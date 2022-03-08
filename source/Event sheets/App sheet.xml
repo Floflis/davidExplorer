@@ -187,6 +187,11 @@
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">&quot;/&quot;</param>
                                 </condition>
+                                <condition id="-8" name="Compare two values" sid="440660161060103" type="System">
+                                    <param id="0" name="First value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;Z-root&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="943126529715730" type="System">
@@ -208,15 +213,40 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="522840005749798">
+                        <event-block sid="134489576000205">
                             <conditions>
-                                <condition id="-22" name="Else" sid="125916481673495" type="System" />
+                                <condition id="-22" name="Else" sid="379337774418920" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-9" name="Set value" sid="216711278849498" type="System">
+                                <action id="-9" name="Set value" sid="304449922315026" type="System">
                                     <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                    <param id="1" name="Value">&quot;/1&quot;</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="603309319106125" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="0" name="Play" sid="286977833038686" type="Audio">
+                                    <param id="0" name="Audio file">Navigation</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="398714619398660" type="System">
+                                    <param id="0" name="Variable">list</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="522840005749798">
+                            <conditions>
+                                <condition disabled="1" id="-22" name="Else" sid="125916481673495" type="System" />
+                                <condition id="-14" name="Compare variable" sid="279639915492985" type="System">
+                                    <param id="0" name="Variable">currentdir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;/&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
                                 <action id="-9" name="Set value" sid="196218549922919" type="System">
                                     <param id="0" name="Variable">currentdir</param>
                                     <param id="1" name="Value">&quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
