@@ -178,23 +178,53 @@
                             <param id="2" name="Second value">-1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="14" name="Log" sid="257312938390618" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="943126529715730" type="System">
-                            <param id="0" name="Variable">currentdir</param>
-                            <param id="1" name="Value">currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="787501072365659" type="System">
-                            <param id="0" name="Seconds">dt</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="375840699298912" type="System">
-                            <param id="0" name="Variable">list</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="169056102641440">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="656253965412683" type="System">
+                                    <param id="0" name="Variable">currentdir</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;/&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="943126529715730" type="System">
+                                    <param id="0" name="Variable">currentdir</param>
+                                    <param id="1" name="Value">currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="787501072365659" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="375840699298912" type="System">
+                                    <param id="0" name="Variable">list</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="522840005749798">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="125916481673495" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="216711278849498" type="System">
+                                    <param id="0" name="Variable">currentdir</param>
+                                    <param id="1" name="Value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="196218549922919" type="System">
+                                    <param id="0" name="Variable">currentdir</param>
+                                    <param id="1" name="Value">&quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="979183707102343" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="454056520051651" type="System">
+                                    <param id="0" name="Variable">list</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="451107861079868">
                     <conditions>

@@ -1,5 +1,3 @@
-- if current folder is "/", dont add "/" to the next folder
-
 - FrameworkJS
 
 - doubleclick to open file will display an "not implemented yet dialog"
