@@ -6,340 +6,352 @@
         <variable comment="0 = not listing files; 1 = listing files" constant="0" name="list" sid="194357329569141" static="0" type="number">0</variable>
         <variable constant="0" name="currentdir" sid="442507253124268" static="0" type="text">/1</variable>
         <variable constant="0" name="OSIconTheme" sid="837400896326945" static="0" type="text"></variable>
-        <comment>On start, set window title&amp;size, load JS, HTML and CSS.</comment>
-        <event-block sid="173099239752989">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="555787265238940" type="System" />
-            </conditions>
-            <actions>
-                <action id="30" name="Set title" sid="328232009886092" type="Electron">
-                    <param id="0" name="Title">&quot;File Explorer&quot;</param>
-                </action>
-                <action id="19" name="Include Javascript file" sid="472396732576260" type="UI">
-                    <param id="0" name="Javascript file">&quot;script.js&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="169916445352727" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}&#x0D;&#x0A;.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;    width: 21%;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}&#x0D;&#x0A;.exploreritem{display:inline-block;margin-right:10px;    /*padding: 0px 3px 5px 3px;*/&#x0D;&#x0A;    padding: 5px;&#x0D;&#x0A;    border-radius: 5px;}&#x0D;&#x0A;.exploreritem:hover{background:#ababa3}&#x0D;&#x0A;.exploreritem.selected {&#x0D;&#x0A;    background: blue;&#x0D;&#x0A;    color: #fff&#x0D;&#x0A;}&lt;/style&gt;&quot;</param>
-                </action>
-                <action disabled="1" id="7" name="Append HTML" sid="566121917322358" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;style&gt;#enterbtn{display:none}&lt;/style&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="963004526902400" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;button disabled onclick=C2(&apos;back&apos;); title=Back&gt;←&lt;/button&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="810178623277794" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;button disabled onclick=C2(&apos;forward&apos;); title=Forward&gt;→&lt;/button&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="217425454355001" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;input id=addressbar value=&quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="539264033740166" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;button id=&quot;&quot;enterbtn&quot;&quot; title=&quot;&quot;Enter directory&quot;&quot; onclick=&quot;&quot;C2(&apos;enterdir&apos;);&quot;&quot;&gt;→&lt;/button&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="329430334922070" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;refresh&apos;); title=Refresh &apos;&apos;Computer&apos;&apos;&gt;↔&lt;/button&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="351577987475838" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;input class=search placeholder=Search Computer&gt;&lt;br/&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="912545069056132" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;nav class=bar&gt;&lt;/nav&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="638766226369872" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;aside&gt;&lt;/aside&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="731977068728573" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;article id=&quot;&quot;filestable&quot;&quot;&gt;&lt;/article&gt;&quot;</param>
-                </action>
-                <action id="7" name="Append HTML" sid="697319153239555" type="UI">
-                    <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
-                </action>
-            </actions>
+        <event-group description="" sid="891311937068738" title="Boot">
             <sub-events>
-                <comment>Call a function to read output from get-default-icons.sh.</comment>
-                <event-block sid="986995610394147">
-                    <conditions />
-                    <actions>
-                        <action id="17" name="Execute Javascript" sid="287354996697626" type="Browser">
-                            <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);function ls(callback){exec(&apos;cd scripts &amp;&amp; sh ./get-default-icons.sh&apos;,(error,stdout,stderr)=&gt;{if(c2_callFunction)&#x0D;&#x0A;c2_callFunction(callback,[error,stdout,stderr])})}&#x0D;&#x0A;ls(&apos;lsresult&apos;)&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment>After getting the output from get-default-icons.sh passed by this function, put/store it into the OSIconTheme variable.</comment>
-        <event-block sid="651481077422795">
-            <conditions>
-                <condition id="0" name="On function" sid="807852298009602" type="Function">
-                    <param id="0" name="Name">&quot;lsresult&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="567665065294633" type="System">
-                    <param id="0" name="Variable">OSIconTheme</param>
-                    <param id="1" name="Value">Function.Param(1)</param>
-                </action>
-                <action id="-16" name="Wait" sid="637358819006660" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action id="-9" name="Set value" sid="400469041464428" type="System">
-                    <param id="0" name="Variable">list</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>When any C2 function is fired, this block starts to verify conditions.</comment>
-        <event-block sid="796169004211934">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="307882215635776" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block disabled="1" sid="204335377251769">
+                <comment>On start, set window title&amp;size, load JS, HTML and CSS.</comment>
+                <event-block sid="173099239752989">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="309020114409578" type="UI">
-                            <param id="0" name="C2">&quot;back&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="555787265238940" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="212859043661155" type="Function">
-                            <param id="0" name="Name">&quot;navigate&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="30" name="Set title" sid="328232009886092" type="Electron">
+                            <param id="0" name="Title">&quot;File Explorer&quot;</param>
+                        </action>
+                        <action id="19" name="Include Javascript file" sid="472396732576260" type="UI">
+                            <param id="0" name="Javascript file">&quot;script.js&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="169916445352727" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}&#x0D;&#x0A;.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;    width: 21%;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}&#x0D;&#x0A;.exploreritem{display:inline-block;margin-right:10px;    /*padding: 0px 3px 5px 3px;*/&#x0D;&#x0A;    padding: 5px;&#x0D;&#x0A;    border-radius: 5px;}&#x0D;&#x0A;.exploreritem:hover{background:#ababa3}&#x0D;&#x0A;.exploreritem.selected {&#x0D;&#x0A;    background: blue;&#x0D;&#x0A;    color: #fff&#x0D;&#x0A;}&lt;/style&gt;&quot;</param>
+                        </action>
+                        <action disabled="1" id="7" name="Append HTML" sid="566121917322358" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;style&gt;#enterbtn{display:none}&lt;/style&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="963004526902400" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;button disabled onclick=C2(&apos;back&apos;); title=Back&gt;←&lt;/button&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="810178623277794" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;button disabled onclick=C2(&apos;forward&apos;); title=Forward&gt;→&lt;/button&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="217425454355001" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;input id=addressbar value=&quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="539264033740166" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;button id=&quot;&quot;enterbtn&quot;&quot; title=&quot;&quot;Enter directory&quot;&quot; onclick=&quot;&quot;C2(&apos;enterdir&apos;);&quot;&quot;&gt;→&lt;/button&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="329430334922070" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;button onclick=C2(&apos;refresh&apos;); title=Refresh &apos;&apos;Computer&apos;&apos;&gt;↔&lt;/button&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="351577987475838" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;input class=search placeholder=Search Computer&gt;&lt;br/&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="912545069056132" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;nav class=bar&gt;&lt;/nav&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="638766226369872" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;aside&gt;&lt;/aside&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="731977068728573" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;article id=&quot;&quot;filestable&quot;&quot;&gt;&lt;/article&gt;&quot;</param>
+                        </action>
+                        <action id="7" name="Append HTML" sid="697319153239555" type="UI">
+                            <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block disabled="1" sid="718047765506266">
-                    <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="624843001087047" type="UI">
-                            <param id="0" name="C2">&quot;forward&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="410543803470011" type="Function">
-                            <param id="0" name="Name">&quot;navigate&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="253670022018088">
-                    <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="876578704051668" type="UI">
-                            <param id="0" name="C2">&quot;refresh&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="381925000956354" type="Function">
-                            <param id="0" name="Name">&quot;navigate&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>When user press [Enter] at addressbar (not handled by C2 events but by script.js) or clicks the Enter button, store the addressbar&apos;s input value into the currentdir variable.</comment>
-                <event-block sid="523481103139547">
-                    <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="606338513058159" type="UI">
-                            <param id="0" name="C2">&quot;enterdir&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="328652540162392" type="System">
-                            <param id="0" name="Variable">currentdir</param>
-                            <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}addressbarvalue()&quot;)</param>
-                        </action>
-                        <action id="0" name="Call function" sid="347166746607998" type="Function">
-                            <param id="0" name="Name">&quot;navigate&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>If the C2 function contains &quot;open-folder&quot;, this block starts to verify conditions.</comment>
-                <event-block sid="575131273315503">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="153042933531079" type="System">
-                            <param id="0" name="First value">find(UI.C2,&quot;open-folder-&quot;)</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">-1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
                     <sub-events>
-                        <comment>The most usual way of navigating; this is the condition that occurs more frequently.</comment>
-                        <event-block sid="169056102641440">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="656253965412683" type="System">
-                                    <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;/&quot;</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="484062731264624" type="System">
-                                    <param id="0" name="First value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Second value">&quot;Z-root&quot;</param>
-                                </condition>
-                            </conditions>
+                        <comment>Call a function to read output from get-default-icons.sh.</comment>
+                        <event-block sid="986995610394147">
+                            <conditions />
                             <actions>
-                                <action id="-9" name="Set value" sid="943126529715730" type="System">
-                                    <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Value">currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="727505574061526" type="Function">
-                                    <param id="0" name="Name">&quot;navigate&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>If user is at root and navigates into a folder, don&apos;t prepend the previous folder (so it won&apos;t prepend &quot;/&quot; which would become &quot;//&quot;</comment>
-                        <event-block sid="522840005749798">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="279639915492985" type="System">
-                                    <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;/&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="196218549922919" type="System">
-                                    <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Value">&quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="395453520564854" type="Function">
-                                    <param id="0" name="Name">&quot;navigate&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>If user is at the tree folder and clicks to open &quot;Z-root&quot;, go directly to root instead of going to this symlink; avoids a &quot;symlink-to-top-folder&quot; loop.</comment>
-                        <event-block sid="134489576000205">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="126192203399717" type="System">
-                                    <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;/1&quot;</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="440660161060103" type="System">
-                                    <param id="0" name="First value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Z-root&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="304449922315026" type="System">
-                                    <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Value">&quot;/&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="126529016904705" type="Function">
-                                    <param id="0" name="Name">&quot;navigate&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                <action id="17" name="Execute Javascript" sid="287354996697626" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);function ls(callback){exec(&apos;cd scripts &amp;&amp; sh ./get-default-icons.sh&apos;,(error,stdout,stderr)=&gt;{if(c2_callFunction)&#x0D;&#x0A;c2_callFunction(callback,[error,stdout,stderr])})}&#x0D;&#x0A;ls(&apos;lsresult&apos;)&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>If the C2 function contains &quot;open-file&quot;, this block starts to verify conditions.</comment>
-                <event-block sid="451107861079868">
+                <comment>After getting the output from get-default-icons.sh passed by this function, put/store it into the OSIconTheme variable.</comment>
+                <event-block sid="651481077422795">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="667854329847368" type="System">
-                            <param id="0" name="First value">find(UI.C2,&quot;open-file-&quot;)</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">-1</param>
+                        <condition id="0" name="On function" sid="807852298009602" type="Function">
+                            <param id="0" name="Name">&quot;lsresult&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="966971416426882" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1)</param>
+                        <action id="-9" name="Set value" sid="567665065294633" type="System">
+                            <param id="0" name="Variable">OSIconTheme</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="637358819006660" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="400469041464428" type="System">
+                            <param id="0" name="Variable">list</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <comment>When file listing is triggered (is 1), disarm its trigger variable (set to 0) and resets file listing view to empty until the new content is loaded; also: reset the content of addressbar to reflect the currentdirectory.</comment>
-        <event-block sid="525548977786862">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="429089406542173" type="System">
-                    <param id="0" name="Variable">list</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="262934827354563" type="System" />
-            </conditions>
-            <actions>
-                <action id="24" name="Get elements" sid="460661358984421" type="UI">
-                    <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
-                    <param id="1" name="Set">&quot; &quot;</param>
-                    <param id="2" name="Append">&quot;&quot;</param>
-                </action>
-                <action id="-16" name="Wait" sid="362340278426577" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action id="-9" name="Set value" sid="649486754177723" type="System">
-                    <param id="0" name="Variable">list</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="17" name="Execute Javascript" sid="119811980393780" type="Browser">
-                    <param id="0" name="Javascript">&quot;document.getElementById(&quot;&quot;addressbar&quot;&quot;).value = &quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;;&quot;</param>
-                </action>
-            </actions>
+        </event-group>
+        <event-group description="" sid="386969428721046" title="C2 Functions">
             <sub-events>
-                <event-block sid="513574553637031">
+                <comment>When any C2 function is fired, this block starts to verify conditions.</comment>
+                <event-block sid="796169004211934">
                     <conditions>
-                        <condition id="5" name="For each file/folder" sid="505130611311532" type="Electron">
-                            <param id="0" name="Path">currentdir</param>
-                            <param id="1" name="Files/Folders">0</param>
-                            <param id="2" name="Recursive">0</param>
+                        <condition id="3" name="On C2 Function" sid="307882215635776" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="204335377251769">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="309020114409578" type="UI">
+                                    <param id="0" name="C2">&quot;back&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="212859043661155" type="Function">
+                                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="718047765506266">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="624843001087047" type="UI">
+                                    <param id="0" name="C2">&quot;forward&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="410543803470011" type="Function">
+                                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="253670022018088">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="876578704051668" type="UI">
+                                    <param id="0" name="C2">&quot;refresh&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="381925000956354" type="Function">
+                                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>When user press [Enter] at addressbar (not handled by C2 events but by script.js) or clicks the Enter button, store the addressbar&apos;s input value into the currentdir variable.</comment>
+                        <event-block sid="523481103139547">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="606338513058159" type="UI">
+                                    <param id="0" name="C2">&quot;enterdir&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="328652540162392" type="System">
+                                    <param id="0" name="Variable">currentdir</param>
+                                    <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}addressbarvalue()&quot;)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="347166746607998" type="Function">
+                                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>If the C2 function contains &quot;open-folder&quot;, this block starts to verify conditions.</comment>
+                        <event-block sid="575131273315503">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="153042933531079" type="System">
+                                    <param id="0" name="First value">find(UI.C2,&quot;open-folder-&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>The most usual way of navigating; this is the condition that occurs more frequently.</comment>
+                                <event-block sid="169056102641440">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="656253965412683" type="System">
+                                            <param id="0" name="Variable">currentdir</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;/&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="484062731264624" type="System">
+                                            <param id="0" name="First value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;Z-root&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="943126529715730" type="System">
+                                            <param id="0" name="Variable">currentdir</param>
+                                            <param id="1" name="Value">currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="727505574061526" type="Function">
+                                            <param id="0" name="Name">&quot;navigate&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>If user is at root and navigates into a folder, don&apos;t prepend the previous folder (so it won&apos;t prepend &quot;/&quot; which would become &quot;//&quot;</comment>
+                                <event-block sid="522840005749798">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="279639915492985" type="System">
+                                            <param id="0" name="Variable">currentdir</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;/&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="196218549922919" type="System">
+                                            <param id="0" name="Variable">currentdir</param>
+                                            <param id="1" name="Value">&quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="395453520564854" type="Function">
+                                            <param id="0" name="Name">&quot;navigate&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>If user is at the tree folder and clicks to open &quot;Z-root&quot;, go directly to root instead of going to this symlink; avoids a &quot;symlink-to-top-folder&quot; loop.</comment>
+                                <event-block sid="134489576000205">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="126192203399717" type="System">
+                                            <param id="0" name="Variable">currentdir</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;/1&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="440660161060103" type="System">
+                                            <param id="0" name="First value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Z-root&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="304449922315026" type="System">
+                                            <param id="0" name="Variable">currentdir</param>
+                                            <param id="1" name="Value">&quot;/&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="126529016904705" type="Function">
+                                            <param id="0" name="Name">&quot;navigate&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>If the C2 function contains &quot;open-file&quot;, this block starts to verify conditions.</comment>
+                        <event-block sid="451107861079868">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="667854329847368" type="System">
+                                    <param id="0" name="First value">find(UI.C2,&quot;open-file-&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="966971416426882" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="495325301073764" title="File Listing">
+            <sub-events>
+                <comment>When file listing is triggered (is 1), disarm its trigger variable (set to 0) and resets file listing view to empty until the new content is loaded; also: reset the content of addressbar to reflect the currentdirectory.</comment>
+                <event-block sid="525548977786862">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="429089406542173" type="System">
+                            <param id="0" name="Variable">list</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="262934827354563" type="System" />
                     </conditions>
                     <actions>
-                        <action id="24" name="Get elements" sid="655402628277118" type="UI">
+                        <action id="24" name="Get elements" sid="460661358984421" type="UI">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
-                            <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-folder-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/&quot; &amp; OSIconTheme &amp; &quot;/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                            <param id="1" name="Set">&quot; &quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="362340278426577" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="649486754177723" type="System">
+                            <param id="0" name="Variable">list</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="17" name="Execute Javascript" sid="119811980393780" type="Browser">
+                            <param id="0" name="Javascript">&quot;document.getElementById(&quot;&quot;addressbar&quot;&quot;).value = &quot;&quot;&quot; &amp; currentdir &amp; &quot;&quot;&quot;;&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="513574553637031">
+                            <conditions>
+                                <condition id="5" name="For each file/folder" sid="505130611311532" type="Electron">
+                                    <param id="0" name="Path">currentdir</param>
+                                    <param id="1" name="Files/Folders">0</param>
+                                    <param id="2" name="Recursive">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="24" name="Get elements" sid="655402628277118" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
+                                    <param id="1" name="Set">&quot;&quot;</param>
+                                    <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-folder-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/&quot; &amp; OSIconTheme &amp; &quot;/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="349446887300692">
+                            <conditions>
+                                <condition id="5" name="For each file/folder" sid="368051195772318" type="Electron">
+                                    <param id="0" name="Path">currentdir</param>
+                                    <param id="1" name="Files/Folders">1</param>
+                                    <param id="2" name="Recursive">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="24" name="Get elements" sid="866692304713327" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
+                                    <param id="1" name="Set">&quot;&quot;</param>
+                                    <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot;  onclick=&quot;&quot;javascript:myname=&apos;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-file-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/&quot; &amp; OSIconTheme &amp; &quot;/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="349446887300692">
+                <event-block sid="703679068978595">
                     <conditions>
-                        <condition id="5" name="For each file/folder" sid="368051195772318" type="Electron">
-                            <param id="0" name="Path">currentdir</param>
-                            <param id="1" name="Files/Folders">1</param>
-                            <param id="2" name="Recursive">0</param>
+                        <condition id="0" name="On function" sid="375359955943092" type="Function">
+                            <param id="0" name="Name">&quot;navigate&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="24" name="Get elements" sid="866692304713327" type="UI">
-                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
-                            <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot;  onclick=&quot;&quot;javascript:myname=&apos;file-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-file-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/&quot; &amp; OSIconTheme &amp; &quot;/256x256/mimetypes/unknown.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
+                        <action id="-16" name="Wait" sid="799877245227009" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="738496410237712" type="System">
+                            <param id="0" name="Variable">list</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="202389549971679" type="Audio">
+                            <param id="0" name="Audio file">Navigation</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="703679068978595">
-            <conditions>
-                <condition id="0" name="On function" sid="375359955943092" type="Function">
-                    <param id="0" name="Name">&quot;navigate&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="799877245227009" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action id="-9" name="Set value" sid="738496410237712" type="System">
-                    <param id="0" name="Variable">list</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Play" sid="202389549971679" type="Audio">
-                    <param id="0" name="Audio file">Navigation</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
