@@ -32,6 +32,8 @@ get icons from /usr/share/icons/Floflis/scalable/places (user-home-symbolic.svg,
 Messages for important directories https://github.com/Floflis/Floflis-Explorer/issues/2
 - read the .folderdata of a folder before entering it, starting by: empty/index.html (have own default message for empty folders) https://github.com/Floflis/Floflis-Explorer/issues/4
 
+- load mimetypes and read icon for every file based on its extension
+
 - display thumbnails
 - display Windows icons in folders, from .ini
 
@@ -40,6 +42,8 @@ Messages for important directories https://github.com/Floflis/Floflis-Explorer/i
 - Multi-tabs navigation (already better than Windows Explorer)
 
 - settings using gsettings
+
+- detect .ppt*, .doc*, .xls and .capx files then use git/pijul
 
 ---------------------------------------------------------------------------------------------------------------------------
 
