@@ -1,14 +1,27 @@
-- Detect icon theme of OS, then use string path
+- if current folder is "/", dont add "/" to the next folder
 
 - FrameworkJS
 
 - doubleclick to open file will display an "not implemented yet dialog"
 
+- "My Computer" collapsible, with Home, Desktop, Documents, Music, Pictures, Videos, Downloads, Tree (Recent, Trash and Network are special URLs and can't be implemented yet)
+get icons from /usr/share/icons/Floflis/scalable/places (user-home-symbolic.svg, user-desktop-symbolic.svg, folder-documents-symbolic.svg, folder-music-symbolic.svg, folder-pictures-symbolic.svg, folder-videos-symbolic.svg, folder-download-symbolic.svg)
+
+- statusbar: display item count and Free space
+
 ---------------------------------------------------------------------------------------------------------------------------
+
+- on start, display "File System" as first device, with a range bar showing its free space
 
 - context menu with "Create New Document" > "Empty Document" items, and write empty file to currentdirectory with the desired title from the modal it opens (uses Bash and the untitled lib)
 
-- "My Computer" and "Network" collapsibles
+- Annotate path, so user can return and forward
+
+- Use sh instead of C2 Electron for listing files
+
+- basic search feature
+
+- Click outside to remove selection
 
 Messages for important directories https://github.com/Floflis/Floflis-Explorer/issues/2
 - read the .folderdata of a folder, starting by: empty/index.html (have own default message for empty folders) https://github.com/Floflis/Floflis-Explorer/issues/4
@@ -17,3 +30,11 @@ Messages for important directories https://github.com/Floflis/Floflis-Explorer/i
 - Use Electron GTK and use same GTK CSS styles from Nemo
 
 - Multi-tabs navigation (already better than Windows Explorer)
+
+- settings using gsettings
+
+---------------------------------------------------------------------------------------------------------------------------
+
+- select items
+
+- drag & drop items (in and out)
