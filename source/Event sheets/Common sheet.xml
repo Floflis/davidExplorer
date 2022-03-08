@@ -89,7 +89,7 @@
                             </conditions>
                             <actions>
                                 <action id="17" name="Execute Javascript" sid="535746319133424" type="Browser">
-                                    <param id="0" name="Javascript">&quot;C2(&apos;hidesidebar&apos;);&quot;</param>
+                                    <param id="0" name="Javascript">&quot;C2(&apos;togglesidebar&apos;);&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

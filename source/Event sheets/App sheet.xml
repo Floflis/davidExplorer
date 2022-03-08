@@ -55,7 +55,7 @@
                             <param id="0" name="Append HTML">&quot;&lt;article id=&quot;&quot;filestable&quot;&quot;&gt;&lt;/article&gt;&quot;</param>
                         </action>
                         <action id="7" name="Append HTML" sid="697319153239555" type="UI">
-                            <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;button title=&quot;&quot;Hide the Sidebar (F9)&quot;&quot; onclick=&quot;&quot;C2(&apos;hidesidebar&apos;);&quot;&quot;&gt;←&lt;/button&gt;&lt;/footer&gt;&quot;</param>
+                            <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;button title=&quot;&quot;Hide the Sidebar (F9)&quot;&quot; onclick=&quot;&quot;C2(&apos;togglesidebar&apos;);&quot;&quot;&gt;←&lt;/button&gt;&lt;/footer&gt;&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -166,7 +166,7 @@
                         <event-block sid="447820911129074">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="922427803320408" type="UI">
-                                    <param id="0" name="C2">&quot;hidesidebar&quot;</param>
+                                    <param id="0" name="C2">&quot;togglesidebar&quot;</param>
                                     <param id="1" name="Case">0</param>
                                 </condition>
                             </conditions>
