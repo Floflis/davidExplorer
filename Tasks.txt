@@ -1,6 +1,6 @@
 - fix scrolling issues for items list
 
-- if currentdir is "/1/Z-root" and user clicks in "/1", reset currentdir to "/1"
+- if currentdir is "/1" and user clicks in "Z-root", reset currentdir to "/"
 
 - statusbar: display item count and Free space
 
