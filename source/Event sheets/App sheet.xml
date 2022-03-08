@@ -218,6 +218,16 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block disabled="1" sid="305904646519809">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="819079567929609" type="System">
+                                    <param id="0" name="First value">find(UI.C2,&quot;open-&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
                         <comment>If the C2 function contains &quot;open-folder&quot;, this block starts to verify conditions.</comment>
                         <event-block sid="575131273315503">
                             <conditions>
@@ -311,9 +321,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="966971416426882" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="966971416426882" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1)</param>
+                                </action>
+                                <action disabled="1" id="17" name="Execute Javascript" sid="256442431673343" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`xdg-open &quot; &amp;RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1) &amp; &quot;`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                                </action>
+                                <action disabled="1" id="17" name="Execute Javascript" sid="916196527393952" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`xdg-open &quot; &amp; currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1) &amp; &quot;`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="650434393986158" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`xdg-open &apos;&quot; &amp; currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-file-(.+)&quot;,&quot;i&quot;,1) &amp; &quot;&apos;`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

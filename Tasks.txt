@@ -6,8 +6,6 @@
 
 - FrameworkJS
 
-- doubleclick to open file will display an "not implemented yet dialog"
-
 - "My Computer" collapsible, with Home, Desktop, Documents, Music, Pictures, Videos, Downloads, Tree (Recent, Trash and Network are special URLs and can't be implemented yet)
 get icons from /usr/share/icons/Floflis/scalable/places (user-home-symbolic.svg, user-desktop-symbolic.svg, folder-documents-symbolic.svg, folder-music-symbolic.svg, folder-pictures-symbolic.svg, folder-videos-symbolic.svg, folder-download-symbolic.svg)
 
