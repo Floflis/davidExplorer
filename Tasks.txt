@@ -1,5 +1,7 @@
 - fix scrolling issues for items list
 
+- if currentdir is "/1/Z-root" and user clicks in "/1", reset currentdir to "/1"
+
 - statusbar: display item count and Free space
 
 - statusbar: display selected item's icon (512x512)
@@ -37,6 +39,7 @@ Messages for important directories https://github.com/Floflis/Floflis-Explorer/i
 - display thumbnails
 - display Windows icons in folders, from .ini
 
+- Manually get CSS from current theme (/home/daniell/.themes/Eleganse-Floflis/cinnamon /cinnamon.css and /gdm.css) using get-default-theme.sh
 - Use Electron GTK and use same GTK CSS styles from Nemo
 
 - Multi-tabs navigation (already better than Windows Explorer)
@@ -50,3 +53,5 @@ Messages for important directories https://github.com/Floflis/Floflis-Explorer/i
 - select items
 
 - drag & drop items (in and out)
+
+as it does for /1/Z-root, detect symlinks pointing to upper directory and avoid these loops
