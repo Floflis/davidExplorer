@@ -56,7 +56,7 @@
         <object-type name="Audio" sid="246898853553517">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="lsresult" sid="140854475449905">
+        <object-type name="Function" sid="140854475449905">
             <plugin id="Function" />
         </object-type>
     </object-folder>
@@ -86,7 +86,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="lsresult" uid="5" />
+        <global-instance type="Function" uid="5" />
     </global-instances>
     <sounds-folder>
         <file name="Navigation.ogg" />

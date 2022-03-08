@@ -67,14 +67,14 @@
         </event-block>
         <event-block sid="651481077422795">
             <conditions>
-                <condition id="0" name="On function" sid="807852298009602" type="lsresult">
+                <condition id="0" name="On function" sid="807852298009602" type="Function">
                     <param id="0" name="Name">&quot;lsresult&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="567665065294633" type="System">
                     <param id="0" name="Variable">OSIconTheme</param>
-                    <param id="1" name="Value">lsresult.Param(1)</param>
+                    <param id="1" name="Value">Function.Param(1)</param>
                 </action>
                 <action id="-16" name="Wait" sid="637358819006660" type="System">
                     <param id="0" name="Seconds">dt</param>
@@ -99,11 +99,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="845412794777050" type="Audio">
-                            <param id="0" name="Audio file">Navigation</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="0" name="Call function" sid="212859043661155" type="Function">
+                            <param id="0" name="Name">&quot;navigate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -115,11 +113,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="227123451489700" type="Audio">
-                            <param id="0" name="Audio file">Navigation</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="0" name="Call function" sid="410543803470011" type="Function">
+                            <param id="0" name="Name">&quot;navigate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -131,15 +127,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="222938949992458" type="Audio">
-                            <param id="0" name="Audio file">Navigation</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="490097496952933" type="System">
-                            <param id="0" name="Variable">list</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="0" name="Call function" sid="381925000956354" type="Function">
+                            <param id="0" name="Name">&quot;navigate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -151,22 +141,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="532249377837857" type="Audio">
-                            <param id="0" name="Audio file">Navigation</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="328652540162392" type="System">
                             <param id="0" name="Variable">currentdir</param>
                             <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}addressbarvalue()&quot;)</param>
                         </action>
-                        <action id="-16" name="Wait" sid="393612251845969" type="System">
-                            <param id="0" name="Seconds">dt</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="407496664592236" type="System">
-                            <param id="0" name="Variable">list</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="0" name="Call function" sid="347166746607998" type="Function">
+                            <param id="0" name="Name">&quot;navigate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -178,16 +159,7 @@
                             <param id="2" name="Second value">-1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="14" name="Log" sid="282231727855841" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="730133362106588" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">currentdir</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="169056102641440">
                             <conditions>
@@ -196,11 +168,6 @@
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">&quot;/&quot;</param>
                                 </condition>
-                                <condition disabled="1" id="-14" name="Compare variable" sid="559023174238874" type="System">
-                                    <param id="0" name="Variable">currentdir</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;/1&quot;</param>
-                                </condition>
                                 <condition id="-8" name="Compare two values" sid="484062731264624" type="System">
                                     <param id="0" name="First value">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
                                     <param id="1" name="Comparison">1</param>
@@ -208,26 +175,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="644463924841484" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="943126529715730" type="System">
                                     <param id="0" name="Variable">currentdir</param>
                                     <param id="1" name="Value">currentdir &amp; &quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="787501072365659" type="System">
-                                    <param id="0" name="Seconds">dt</param>
-                                </action>
-                                <action id="0" name="Play" sid="591845014857498" type="Audio">
-                                    <param id="0" name="Audio file">Navigation</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="375840699298912" type="System">
-                                    <param id="0" name="Variable">list</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Call function" sid="727505574061526" type="Function">
+                                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -244,18 +198,9 @@
                                     <param id="0" name="Variable">currentdir</param>
                                     <param id="1" name="Value">&quot;/&quot; &amp; RegexMatchAt(UI.C2,&quot;open-folder-(.+)&quot;,&quot;i&quot;,1)</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="979183707102343" type="System">
-                                    <param id="0" name="Seconds">dt</param>
-                                </action>
-                                <action id="0" name="Play" sid="355948830870959" type="Audio">
-                                    <param id="0" name="Audio file">Navigation</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="454056520051651" type="System">
-                                    <param id="0" name="Variable">list</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Call function" sid="395453520564854" type="Function">
+                                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -277,18 +222,9 @@
                                     <param id="0" name="Variable">currentdir</param>
                                     <param id="1" name="Value">&quot;/&quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="603309319106125" type="System">
-                                    <param id="0" name="Seconds">dt</param>
-                                </action>
-                                <action id="0" name="Play" sid="286977833038686" type="Audio">
-                                    <param id="0" name="Audio file">Navigation</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="398714619398660" type="System">
-                                    <param id="0" name="Variable">list</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Call function" sid="126529016904705" type="Function">
+                                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -371,6 +307,28 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="703679068978595">
+            <conditions>
+                <condition id="0" name="On function" sid="375359955943092" type="Function">
+                    <param id="0" name="Name">&quot;navigate&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="799877245227009" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="-9" name="Set value" sid="738496410237712" type="System">
+                    <param id="0" name="Variable">list</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="202389549971679" type="Audio">
+                    <param id="0" name="Audio file">Navigation</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
