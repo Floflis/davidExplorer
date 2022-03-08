@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Splash sheet</name>
     <events>
+        <include>Common sheet</include>
         <comment>On start, set window title&amp;size and load HTML for the splashscreen.</comment>
         <event-block sid="324106249816331">
             <conditions>

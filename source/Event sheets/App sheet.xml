@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>App sheet</name>
     <events>
+        <include>Common sheet</include>
         <include>variables-triggers</include>
         <variable constant="0" name="currentdir" sid="442507253124268" static="0" type="text">/1</variable>
         <variable constant="0" name="OSIconTheme" sid="837400896326945" static="0" type="text"></variable>
