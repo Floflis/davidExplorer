@@ -68,6 +68,7 @@
     <event-folder>
         <event-sheet>Splash sheet.xml</event-sheet>
         <event-sheet>App sheet.xml</event-sheet>
+        <event-sheet>variables-triggers.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Electron" uid="0" />

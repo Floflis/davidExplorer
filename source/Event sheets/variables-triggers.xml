@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>variables-triggers</name>
+    <events>
+        <variable comment="0 = not listing files; 1 = listing files" constant="0" name="list" sid="194357329569141" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>
