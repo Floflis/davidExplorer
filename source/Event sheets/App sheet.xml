@@ -6,6 +6,7 @@
         <variable comment="0 = not listing files; 1 = listing files" constant="0" name="list" sid="194357329569141" static="0" type="number">0</variable>
         <variable constant="0" name="currentdir" sid="442507253124268" static="0" type="text">/1</variable>
         <variable constant="0" name="OSIconTheme" sid="837400896326945" static="0" type="text"></variable>
+        <comment>On start, set window title&amp;size, load JS, HTML and CSS.</comment>
         <event-block sid="173099239752989">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="555787265238940" type="System" />
@@ -55,6 +56,7 @@
                 </action>
             </actions>
             <sub-events>
+                <comment>Call a function to read output from get-default-icons.sh.</comment>
                 <event-block sid="986995610394147">
                     <conditions />
                     <actions>
@@ -65,6 +67,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>After getting the output from get-default-icons.sh passed by this function, put/store it into the OSIconTheme variable.</comment>
         <event-block sid="651481077422795">
             <conditions>
                 <condition id="0" name="On function" sid="807852298009602" type="Function">
@@ -85,6 +88,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>When any C2 function is fired, this block starts to verify conditions.</comment>
         <event-block sid="796169004211934">
             <conditions>
                 <condition id="3" name="On C2 Function" sid="307882215635776" type="UI" />
@@ -133,6 +137,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>When user press [Enter] at addressbar (not handled by C2 events but by script.js) or clicks the Enter button, store the addressbar&apos;s input value into the currentdir variable.</comment>
                 <event-block sid="523481103139547">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="606338513058159" type="UI">
@@ -151,6 +156,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>If the C2 function contains &quot;open-folder&quot;, this block starts to verify conditions.</comment>
                 <event-block sid="575131273315503">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="153042933531079" type="System">
@@ -161,6 +167,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>The most usual way of navigating; this is the condition that occurs more frequently.</comment>
                         <event-block sid="169056102641440">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="656253965412683" type="System">
@@ -185,6 +192,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>If user is at root and navigates into a folder, don&apos;t prepend the previous folder (so it won&apos;t prepend &quot;/&quot; which would become &quot;//&quot;</comment>
                         <event-block sid="522840005749798">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="279639915492985" type="System">
@@ -204,6 +212,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>If user is at the tree folder and clicks to open &quot;Z-root&quot;, go directly to root instead of going to this symlink; avoids a &quot;symlink-to-top-folder&quot; loop.</comment>
                         <event-block sid="134489576000205">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="126192203399717" type="System">
@@ -230,6 +239,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>If the C2 function contains &quot;open-file&quot;, this block starts to verify conditions.</comment>
                 <event-block sid="451107861079868">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="667854329847368" type="System">
@@ -247,6 +257,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>When file listing is triggered (is 1), disarm its trigger variable (set to 0) and resets file listing view to empty until the new content is loaded; also: reset the content of addressbar to reflect the currentdirectory.</comment>
         <event-block sid="525548977786862">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="429089406542173" type="System">

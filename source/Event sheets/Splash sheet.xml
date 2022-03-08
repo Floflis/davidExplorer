@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Splash sheet</name>
     <events>
+        <comment>On start, set window title&amp;size and load HTML for the splashscreen.</comment>
         <event-block sid="324106249816331">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="721917666986824" type="System" />
@@ -21,6 +22,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>From the splashscreen, go to the App layout.</comment>
         <event-block sid="360310713846283">
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="596427660053236" type="System" />
