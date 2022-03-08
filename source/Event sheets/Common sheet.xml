@@ -5,7 +5,7 @@
     <events>
         <comment>Defines if fullscreen is active or else.</comment>
         <variable constant="0" name="Fullscreen" sid="422061181924864" static="0" type="number">0</variable>
-        <event-group description="" sid="819686042377977" title="Keyboard shortcuts2">
+        <event-group description="" sid="819686042377977" title="Keyboard shortcuts">
             <sub-events>
                 <event-group description="" sid="567761529502886" title="F12">
                     <sub-events>
@@ -75,6 +75,22 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Exit" sid="409478982207593" type="Electron" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="628082506236407" title="F9">
+                    <sub-events>
+                        <event-block sid="697263956417358">
+                            <conditions>
+                                <condition id="21" name="On shortcut" sid="809132790681169" type="Electron">
+                                    <param id="0" name="Tag">&quot;togglesidebar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="17" name="Execute Javascript" sid="535746319133424" type="Browser">
+                                    <param id="0" name="Javascript">&quot;C2(&apos;hidesidebar&apos;);&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

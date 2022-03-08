@@ -28,3 +28,18 @@ function itemSelectedEffect() {
    //document.querySelector('#' + myname).classList.add('selected');
    //document.getElementById(myname).classList.add('selected');
 }
+
+function hideSidebar() {
+   var element = document.getElementById('sidebar');
+   element.classList.add('hidden');
+}
+function showSidebar() {
+   //var buttons = document.getElementById('sidebar'),
+   //     len = buttons !== null ? buttons.length : 0,
+   //     i = 0;
+   // for(i; i < len; i++) {
+   //     buttons[i].classList.remove('hidden');
+   // }
+   var element = document.getElementById('sidebar');
+   element.classList.remove('hidden');
+}

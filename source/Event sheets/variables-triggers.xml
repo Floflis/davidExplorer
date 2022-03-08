@@ -4,5 +4,6 @@
     <name>variables-triggers</name>
     <events>
         <variable comment="0 = not listing files; 1 = listing files" constant="0" name="list" sid="194357329569141" static="0" type="number">0</variable>
+        <variable constant="0" name="sidebarhidden" sid="882044695403872" static="0" type="number">0</variable>
     </events>
 </c2eventsheet>

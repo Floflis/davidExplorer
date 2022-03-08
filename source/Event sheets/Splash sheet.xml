@@ -21,6 +21,18 @@
                 <action id="6" name="Set HTML" sid="742983883244831" type="UI">
                     <param id="0" name="Set HTML">&quot;&lt;style&gt;body{color:black}&lt;/style&gt;&lt;center&gt;&lt;h4&gt;Screens&lt;/h4&gt;&lt;h1&gt;File Explorer&lt;/h1&gt;&lt;/center&gt;&quot;</param>
                 </action>
+                <action id="45" name="Register a shortcut" sid="311827034760325" type="Electron">
+                    <param id="0" name="Accelerator">&quot;F11&quot;</param>
+                    <param id="1" name="Tag">&quot;fullscreen&quot;</param>
+                </action>
+                <action id="45" name="Register a shortcut" sid="617543134693623" type="Electron">
+                    <param id="0" name="Accelerator">&quot;ESC&quot;</param>
+                    <param id="1" name="Tag">&quot;close&quot;</param>
+                </action>
+                <action id="45" name="Register a shortcut" sid="384600463428318" type="Electron">
+                    <param id="0" name="Accelerator">&quot;F9&quot;</param>
+                    <param id="1" name="Tag">&quot;togglesidebar&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>From the splashscreen, go to the App layout.</comment>

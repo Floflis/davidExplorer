@@ -22,7 +22,7 @@
                             <param id="0" name="Javascript file">&quot;script.js&quot;</param>
                         </action>
                         <action id="7" name="Append HTML" sid="169916445352727" type="UI">
-                            <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}&#x0D;&#x0A;.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;    width: 21%;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}&#x0D;&#x0A;.exploreritem{display:inline-block;margin-right:10px;    /*padding: 0px 3px 5px 3px;*/&#x0D;&#x0A;    padding: 5px;&#x0D;&#x0A;    border-radius: 5px;}&#x0D;&#x0A;.exploreritem:hover{background:#ababa3}&#x0D;&#x0A;.exploreritem.selected {&#x0D;&#x0A;    background: blue;&#x0D;&#x0A;    color: #fff&#x0D;&#x0A;}&lt;/style&gt;&quot;</param>
+                            <param id="0" name="Append HTML">&quot;&lt;style&gt;body{margin:0}&#x0D;&#x0A;.search {&#x0D;&#x0A;    float: right;&#x0D;&#x0A;    width: 21%;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;#addressbar {&#x0D;&#x0A;        width: calc(100% - 262px);&#x0D;&#x0A;}nav.bar {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 39px;&#x0D;&#x0A;    background: #00BCD4;&#x0D;&#x0A;    border-bottom: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;aside {&#x0D;&#x0A;    float: left;&#x0D;&#x0A;    width: 198px;&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    border-right: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;footer {&#x0D;&#x0A;    width: 100%;&#x0D;&#x0A;    height: 66px;&#x0D;&#x0A;    position: absolute;&#x0D;&#x0A;    bottom: 0;&#x0D;&#x0A;    background: rgba(0, 188, 212, 0.50);&#x0D;&#x0A;    border-top: 1px solid #018ea0;&#x0D;&#x0A;}&#x0D;&#x0A;&#x0D;&#x0A;article {&#x0D;&#x0A;    width: calc(100% - 198px);&#x0D;&#x0A;    height: calc(100% - 129px);&#x0D;&#x0A;    margin-left: 198px;&#x0D;&#x0A;}&#x0D;&#x0A;#filestable{color:#000}&#x0D;&#x0A;.exploreritem{display:inline-block;margin-right:10px;    /*padding: 0px 3px 5px 3px;*/&#x0D;&#x0A;    padding: 5px;&#x0D;&#x0A;    border-radius: 5px;}&#x0D;&#x0A;.exploreritem:hover{background:#ababa3}&#x0D;&#x0A;.exploreritem.selected {&#x0D;&#x0A;    background: blue;&#x0D;&#x0A;    color: #fff&#x0D;&#x0A;}&#x0D;&#x0A;.hidden{display:none}&lt;/style&gt;&quot;</param>
                         </action>
                         <action disabled="1" id="7" name="Append HTML" sid="566121917322358" type="UI">
                             <param id="0" name="Append HTML">&quot;&lt;style&gt;#enterbtn{display:none}&lt;/style&gt;&quot;</param>
@@ -49,13 +49,13 @@
                             <param id="0" name="Append HTML">&quot;&lt;nav class=bar&gt;&lt;/nav&gt;&quot;</param>
                         </action>
                         <action id="7" name="Append HTML" sid="638766226369872" type="UI">
-                            <param id="0" name="Append HTML">&quot;&lt;aside&gt;&lt;/aside&gt;&quot;</param>
+                            <param id="0" name="Append HTML">&quot;&lt;aside id=&quot;&quot;sidebar&quot;&quot;&gt;&lt;/aside&gt;&quot;</param>
                         </action>
                         <action id="7" name="Append HTML" sid="731977068728573" type="UI">
                             <param id="0" name="Append HTML">&quot;&lt;article id=&quot;&quot;filestable&quot;&quot;&gt;&lt;/article&gt;&quot;</param>
                         </action>
                         <action id="7" name="Append HTML" sid="697319153239555" type="UI">
-                            <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
+                            <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;button title=&quot;&quot;Hide the Sidebar (F9)&quot;&quot; onclick=&quot;&quot;C2(&apos;hidesidebar&apos;);&quot;&quot;&gt;←&lt;/button&gt;&lt;/footer&gt;&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -162,6 +162,61 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="447820911129074">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="922427803320408" type="UI">
+                                    <param id="0" name="C2">&quot;hidesidebar&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>If sidebar isn&apos;t hidden, toggles hidesidebar and marks it as hidden.</comment>
+                                <event-block sid="517722701458597">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="457297347181217" type="System">
+                                            <param id="0" name="Variable">sidebarhidden</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="17" name="Execute Javascript" sid="769797205726636" type="Browser">
+                                            <param id="0" name="Javascript">&quot;hideSidebar();&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="769457182228387" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="252042795483007" type="System">
+                                            <param id="0" name="Variable">sidebarhidden</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>If sidebar is already hidden, toggles hidesidebar and marks it as visible.</comment>
+                                <event-block sid="342678276922023">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="879706312462858" type="System">
+                                            <param id="0" name="Variable">sidebarhidden</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="17" name="Execute Javascript" sid="311657109672206" type="Browser">
+                                            <param id="0" name="Javascript">&quot;showSidebar();&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="921403358589409" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="631656887622016" type="System">
+                                            <param id="0" name="Variable">sidebarhidden</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>If the C2 function contains &quot;open-folder&quot;, this block starts to verify conditions.</comment>
                         <event-block sid="575131273315503">
