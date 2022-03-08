@@ -53,17 +53,6 @@
                 <action id="7" name="Append HTML" sid="697319153239555" type="UI">
                     <param id="0" name="Append HTML">&quot;&lt;footer&gt;&lt;/footer&gt;&quot;</param>
                 </action>
-                <action disabled="1" id="-9" name="Set value" sid="605781375833720" type="System">
-                    <param id="0" name="Variable">currentdir</param>
-                    <param id="1" name="Value">Browser.ExecJS(&quot;function addressbarvalue(){var x=document.getElementById(&apos;addressbar&apos;).value;return x}addressbarvalue()&quot;)</param>
-                </action>
-                <action disabled="1" id="-16" name="Wait" sid="548866741161635" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="623202774444177" type="System">
-                    <param id="0" name="Variable">list</param>
-                    <param id="1" name="Value">1</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block sid="986995610394147">
@@ -109,7 +98,14 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" sid="845412794777050" type="Audio">
+                            <param id="0" name="Audio file">Navigation</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block disabled="1" sid="718047765506266">
                     <conditions>
@@ -118,7 +114,14 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" sid="227123451489700" type="Audio">
+                            <param id="0" name="Audio file">Navigation</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="253670022018088">
                     <conditions>
@@ -246,32 +249,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="24" name="Get elements" sid="605553893954299" type="UI">
-                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
-                            <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-folder-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/&quot; &amp; Browser.ExecJS(&quot;&quot;) &amp; &quot;/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
-                        </action>
-                        <action disabled="1" id="17" name="Execute Javascript" sid="977059235993137" type="Browser">
-                            <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);function ls(callback){exec(&apos;cd scripts &amp;&amp; sh ./get-default-icons.sh&apos;,(error,stdout,stderr)=&gt;{if(c2_callFunction)&#x0D;&#x0A;c2_callFunction(callback,[error,stdout,stderr])})}&#x0D;&#x0A;ls(&apos;lsresult&apos;)&quot;</param>
-                        </action>
                         <action id="24" name="Get elements" sid="655402628277118" type="UI">
                             <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
                             <param id="1" name="Set">&quot;&quot;</param>
                             <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-folder-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/&quot; &amp; OSIconTheme &amp; &quot;/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="887522522399361">
-                    <conditions>
-                        <condition id="0" name="On function" sid="977031524468045" type="lsresult">
-                            <param id="0" name="Name">&quot;lsresult&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="24" name="Get elements" sid="316460862252689" type="UI">
-                            <param id="0" name="ID/Class">&quot;#filestable&quot;</param>
-                            <param id="1" name="Set">&quot;&quot;</param>
-                            <param id="2" name="Append">&quot;&lt;div id=&quot;&quot;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&quot;&quot; onclick=&quot;&quot;javascript:myname=&apos;folder-name-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;;resetitemSelectedEffect();itemSelectedEffect();&quot;&quot; ondblclick=&quot;&quot;C2(&apos;open-folder-&quot; &amp; Electron.CurrentFileFolder &amp; &quot;&apos;);&quot;&quot; class=&quot;&quot;exploreritem&quot;&quot;&gt;&lt;center&gt;&lt;img width=&quot;&quot;50px&quot;&quot; src=&quot;&quot;/usr/share/icons/&quot; &amp; lsresult.Param(1) &amp; &quot;/256x256/places/folder.png&quot;&quot;/&gt;&lt;p&gt;&quot; &amp; Electron.CurrentFileFolder &amp;&quot;&lt;/p&gt;&lt;/center&gt;&lt;/div&gt;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
