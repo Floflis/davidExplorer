@@ -48,6 +48,9 @@ Messages for important directories https://github.com/Floflis/Floflis-Explorer/i
 
 - settings using gsettings
 
+❯ xdg-open "Color Converter.html5"
+gio: file:///media/daniell/B/bkp/ST500LM012%20HN-M500MBB%20Dat/0/ok/Pendrive/.0/html5/Color%20Converter.html5: No application is registered as handling this file
+
 - detect .ppt*, .doc*, .xls and .capx files then use git/pijul
 
 ---------------------------------------------------------------------------------------------------------------------------
