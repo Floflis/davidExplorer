@@ -1,8 +1,8 @@
 - fix scrolling issues for items list
 
-- statusbar: display item count and Free space
-
 - statusbar: display selected item's icon (512x512)
+
+- statusbar: display item count/selected item and Free space
 
 - FrameworkJS
 
@@ -16,6 +16,14 @@ get icons from /usr/share/icons/Floflis/scalable/places (user-home-symbolic.svg,
 - on start, display "File System" as first device at the "Disk Drives" collapsible, with a range bar showing its free space
 
 - context menu with "Create New Document" > "Empty Document" items, and write empty file to currentdirectory with the desired title from the modal it opens (uses Bash and the untitled lib)
+
+- list disks at the "Disk Drives" collapsible
+df -h | awk '{if ($1 != "Filesystem") print $1 " " $5}'
+$5 is % space used
+$2 is the size
+$3 is the space used
+$4 is the space available
+$6 is the path the disk is mounted
 
 - Annotate path, so user can return and forward
 
