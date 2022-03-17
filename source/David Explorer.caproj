@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Screens Explorer</name>
+    <name>David Explorer</name>
     <description>Manage files in your device.</description>
-    <version>1.0.0.0</version>
+    <version>0.16.3.22</version>
     <author>Plasmmer</author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -104,5 +104,6 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file name="script.js" />
+        <file name="icon.png" />
     </files-folder>
 </c2project>
