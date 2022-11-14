@@ -4,12 +4,21 @@
 
 - statusbar: display item count/selected item and Free space
 
+recognize Windows' Desktop.ini files and display folder icons
+
+HTML folders from Windows 98 (background, move files as a pin board)
+
+when inside a symlink folder, display [SYMLINK] label at address bar to go to ln src
+
 - FrameworkJS
 
 - "My Computer" collapsible, with Home, Desktop, Documents, Music, Pictures, Videos, Downloads, Tree (Recent, Trash and Network are special URLs and can't be implemented yet)
 get icons from /usr/share/icons/Floflis/scalable/places (user-home-symbolic.svg, user-desktop-symbolic.svg, folder-documents-symbolic.svg, folder-music-symbolic.svg, folder-pictures-symbolic.svg, folder-videos-symbolic.svg, folder-download-symbolic.svg)
 
 - statusbar is resizeable and selected item's icon responsively resizes
+
+addon for Firefox to view files (default in Firedoge)
+addon for HTTB for serving file lists
 
 ---------------------------------------------------------------------------------------------------------------------------
 
