@@ -5,6 +5,8 @@
 - statusbar: display item count/selected item and Free space
 
 recognize Windows' Desktop.ini files and display folder icons
+support to /media/daniell/Windows 10 main1/Peeper/posts/.folderdata/empty/index.html
+display warning at root folder
 
 HTML folders from Windows 98 (background, move files as a pin board)
 
