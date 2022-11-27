@@ -12,6 +12,11 @@ HTML folders from Windows 98 (background, move files as a pin board)
 
 when inside a symlink folder, display [SYMLINK] label at address bar to go to ln src
 
+- support to Folder.jpg and AlbumArtSmall.jpg
+- follow to original folder, copy link of original folder
+- copy full path of file (containing file or only the parent path)
+- update symlink location
+
 - FrameworkJS
 
 - "My Computer" collapsible, with Home, Desktop, Documents, Music, Pictures, Videos, Downloads, Tree (Recent, Trash and Network are special URLs and can't be implemented yet)
