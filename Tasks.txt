@@ -24,6 +24,10 @@ get icons from /usr/share/icons/Floflis/scalable/places (user-home-symbolic.svg,
 
 - statusbar is resizeable and selected item's icon responsively resizes
 
+- "davexplorer" executable
+- "davexplorer" with the "-t" prefix to open one or multiple tabs from CLI
+- add photo/img of a storage device, then show this img when device isn't found (useful for the "davexplorer -t /media/$flouser/$storage" command, for example)
+
 addon for Firefox to view files (default in Firedoge)
 addon for HTTB for serving file lists
 
