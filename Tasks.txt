@@ -1,3 +1,6 @@
+- detect symlinks
+- context menu edit symlinks https://unix.stackexchange.com/a/152000
+
 - fix scrolling issues for items list
 
 - statusbar: display selected item's icon (512x512)
