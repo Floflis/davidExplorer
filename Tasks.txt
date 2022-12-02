@@ -4,6 +4,7 @@
 - fix scrolling issues for items list
 
 - statusbar: display selected item's icon (512x512)
+- statusbar: tell the # position of a file (if it is the first file, file 2, etc)
 
 - statusbar: display item count/selected item and Free space
 
