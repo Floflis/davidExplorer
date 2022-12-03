@@ -12,6 +12,7 @@ recognize Windows' Desktop.ini files and display folder icons
 support to /media/daniell/Windows 10 main1/Peeper/posts/.folderdata/empty/index.html
 display warning at root folder
 
+- Online icon for Explorer
 HTML folders from Windows 98 (background, move files as a pin board)
 
 when inside a symlink folder, display [SYMLINK] label at address bar to go to ln src
