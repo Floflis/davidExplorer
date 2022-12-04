@@ -63,8 +63,14 @@ Messages for important directories https://github.com/Floflis/Floflis-Explorer/i
 
 - load mimetypes and read icon for every file based on its extension
 
-- display thumbnails
+- set folder icon ("gio set /path/to/directory metadata::custom-icon file:///path/to/image-to-use" but also support Dolphin/Windows/MacOS/Nautilus/others)
+http://web.archive.org/web/20221204153301/https://forums.linuxmint.com/viewtopic.php?p=1566367&sid=e95e895fe58e14fd1128a3c29c3a3bb8#p1566367
+- support displaying folder icons based in Nemo with "gio info -a metadata::custom-icon /path/to/directory" (when displaying, also set for Dolphin/Windows/MacOS/Nautilus/Thunar/others
 - display Windows icons in folders, from .ini
+- display Dolphin/MacOS/Nautilus/Thunar/others icons in folders
+- set/display Nemo/others folder emblems (http://web.archive.org/web/20221204155604/https://forums.linuxmint.com/viewtopic.php?p=2052756&sid=740ccefc9a66e2ce088746e8400e0786#p2052756)
+- display left sidebar exactly as in Nemo https://unix.stackexchange.com/questions/387062/where-are-the-user-bookmark-settings-stored-for-nemo-in-linux-mint
+- display thumbnails
 
 - Manually get CSS from current theme (/home/daniell/.themes/Eleganse-Floflis/cinnamon /cinnamon.css and /gdm.css) using get-default-theme.sh
 - Use Electron GTK and use same GTK CSS styles from Nemo
