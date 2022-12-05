@@ -1,5 +1,6 @@
 - detect symlinks
 - context menu edit symlinks https://unix.stackexchange.com/a/152000
+- option to upper or go down path (through "../")
 
 - fix scrolling issues for items list
 
