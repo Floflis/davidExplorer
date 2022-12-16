@@ -33,7 +33,7 @@ get icons from /usr/share/icons/Floflis/scalable/places (user-home-symbolic.svg,
 - statusbar is resizeable and selected item's icon responsively resizes
 
 - "davexplorer" executable
-- "davexplorer" with the "-t" prefix to open one or multiple tabs from CLI
+- "davexplorer" with the "-t" prefix to open one or multiple tabs from CLI (same for IC/writer/term)
 - add photo/img of a storage device, then show this img when device isn't found (useful for the "davexplorer -t /media/$flouser/$storage" command, for example)
 
 addon for Firefox to view files (default in Firedoge)
@@ -66,6 +66,7 @@ Messages for important directories https://github.com/Floflis/Floflis-Explorer/i
 
 - load mimetypes and read icon for every file based on its extension
 
+careful about setting folder icon: what if it is a symlink?
 - set folder icon ("gio set /path/to/directory metadata::custom-icon file:///path/to/image-to-use" but also support Dolphin/Windows/MacOS/Nautilus/others)
 http://web.archive.org/web/20221204153301/https://forums.linuxmint.com/viewtopic.php?p=1566367&sid=e95e895fe58e14fd1128a3c29c3a3bb8#p1566367
 - support displaying folder icons based in Nemo with "gio info -a metadata::custom-icon /path/to/directory" (when displaying, also set for Dolphin/Windows/MacOS/Nautilus/Thunar/others
