@@ -1,0 +1,1 @@
+after moving a file to a folder, and then clicking/entering this folder, the moved file should appear selected/highlighted
