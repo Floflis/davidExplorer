@@ -2,3 +2,5 @@ after moving a file to a folder, and then clicking/entering this folder, the mov
 
 davidExplorer test tabs and session saving (these tabs should support multiple selecting/dragging + grouping)
 test it as daily driver so the needs will appear and get implemented
+
+when a folder have a favicon or even a apple-touch-icon.png, use it as folder icon
