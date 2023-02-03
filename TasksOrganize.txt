@@ -4,3 +4,5 @@ davidExplorer test tabs and session saving (these tabs should support multiple s
 test it as daily driver so the needs will appear and get implemented
 
 when a folder have a favicon or even a apple-touch-icon.png, use it as folder icon
+
+when viewing a /Desktop folder (Windows, Linux, Mac) option to display exact icon positions
