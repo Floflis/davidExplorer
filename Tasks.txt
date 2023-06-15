@@ -14,6 +14,7 @@ support to /media/daniell/Windows 10 main1/Peeper/posts/.folderdata/empty/index.
 display warning at root folder
 
 - use "/home/daniell/Desktop/Floflis ISO/timeline/Floflis 19/unreleased-branched Testing features/Dualboot Windows/[frk] run Windows apps using... ...Windows/winapps" as dependency to get/display .exe icons
+- dvdExplorer display .exe icons; set icons for drives and Bookmarks
 
 - Online icon for Explorer
 HTML folders from Windows 98 (background, move files as a pin board)
