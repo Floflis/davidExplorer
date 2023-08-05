@@ -3,6 +3,7 @@ Nemo's features THAT SHOULD BE REPRODUCED FOR A MVP EXPERIENCE:
 - Tabs
 - When file/folder address changed, reflect on its openned tab if found such tab
 - When clicking to copy a file/folder, copy its address (avoid conflicts with 1/Z-root if possible!)
+- Find if Nemo is present, then borrow/merge features from it like the context menu's items
 
 - detect symlinks
 - context menu edit symlinks https://unix.stackexchange.com/a/152000
