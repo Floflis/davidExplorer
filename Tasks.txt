@@ -1,3 +1,9 @@
+Nemo's features THAT SHOULD BE REPRODUCED FOR A MVP EXPERIENCE:
+- Support to paste a file in the addressbar to go to its folder while selecting it!
+- Tabs
+- When file/folder address changed, reflect on its openned tab if found such tab
+- When clicking to copy a file/folder, copy its address (avoid conflicts with 1/Z-root if possible!)
+
 - detect symlinks
 - context menu edit symlinks https://unix.stackexchange.com/a/152000
 - option to upper or go down path (through "../")
